@@ -1,6 +1,21 @@
+namespace: alb-internal-test
 javaapi:
-  image: java
+  image:
+    repository: your-repo/javaapi
+    tag: latest
+  service:
+    port: 8080
+
+react-ui:
+  image:
+    repository: your-repo/react-ui
+    tag: latest
+  service:
+    port: 3000
+
 nodeapi:
-  image: node
-reactui:
-  image: nginx
+  image:
+    repository: your-repo/nodeapi
+    tag: latest
+  service:
+    port: 3000

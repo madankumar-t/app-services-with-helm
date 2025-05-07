@@ -1,5 +1,5 @@
 image:
-  repository: your-repo/nodeapi
+  repository: your-repo/react-ui
   tag: latest
 service:
   port: 3000

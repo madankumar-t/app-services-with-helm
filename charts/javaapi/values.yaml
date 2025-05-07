@@ -1,1 +1,5 @@
-image: java
+image:
+  repository: your-repo/javaapi
+  tag: latest
+service:
+  port: 8080

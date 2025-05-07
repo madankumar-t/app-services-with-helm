@@ -1,13 +1,15 @@
-apiVersion: v2
+apiVersion: v3
 name: app-services
 version: 0.1.0
+description: Umbrella chart for Java API, React UI, and Node API
+type: application
 dependencies:
   - name: javaapi
     version: 0.1.0
-    repository: "file://charts/javaapi"
+    repository: file://charts/javaapi
+  - name: react-ui
+    version: 0.1.0
+    repository: file://charts/react-ui
   - name: nodeapi
     version: 0.1.0
-    repository: "file://charts/nodeapi"
-  - name: reactui
-    version: 0.1.0
-    repository: "file://charts/reactui"
+    repository: file://charts/nodeapi

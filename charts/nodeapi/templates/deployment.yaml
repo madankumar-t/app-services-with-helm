@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: nodeapi
-          image: { { .Values.image } }
+          image: { .Values.image.repository }:{ .Values.image.tag }
           ports:
-            - containerPort: 3000
+            - containerPort: { .Values.service.port }
