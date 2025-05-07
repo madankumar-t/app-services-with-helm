@@ -1,14 +1,6 @@
 javaapi:
-  image: your-javaapi-image:latest
-  port: 8080
-
+  image: java
 nodeapi:
-  image: your-nodeapi-image:latest
-  port: 3000
-
+  image: node
 reactui:
-  image: your-reactui-image:latest
-  port: 3000
-
-domainName: app.internal.example.com
-certificateArn: arn:aws:acm:us-east-2:582683034382:certificate/9525c53b-6f25-44e2-9863-7c262f92deda
+  image: nginx

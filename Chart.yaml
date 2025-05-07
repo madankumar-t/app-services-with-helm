@@ -1,5 +1,13 @@
 apiVersion: v2
 name: app-services
-description: A Helm chart to deploy javaapi, nodeapi, and reactui with context path routing
 version: 0.1.0
-appVersion: "1.0"
+dependencies:
+  - name: javaapi
+    version: 0.1.0
+    repository: "file://charts/javaapi"
+  - name: nodeapi
+    version: 0.1.0
+    repository: "file://charts/nodeapi"
+  - name: reactui
+    version: 0.1.0
+    repository: "file://charts/reactui"
