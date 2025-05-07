@@ -1,4 +1,5 @@
 apiVersion: v2
 name: app-services
-description: Deploys javaapi, react-ui, nodeapi with path-based routing via ALB
+description: A Helm chart to deploy javaapi, nodeapi, and reactui with context path routing
 version: 0.1.0
+appVersion: "1.0"

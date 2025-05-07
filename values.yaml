@@ -1,23 +1,14 @@
-namespace: alb-internal-test
-alb:
-  certificateArn: "arn:aws:acm:us-east-2:582683034382:certificate/9525c53b-6f25-44e2-9863-7c262f92deda"
-  domain: "app.internal.core.dcli.com"
-  externalDns:
-    cname: "app.internal.core.dcli.com"
-    zoneId: "Z123456ABCDEFG"
-  cidr: "10.0.0.0/8"
-
 javaapi:
-  image: appdynamics/sample-app
+  image: your-javaapi-image:latest
   port: 8080
-  contextPath: /javaapi
-
-reactui:
-  image: bitnami/appsmith
-  port: 3000
-  contextPath: /react-ui
 
 nodeapi:
-  image: kasmweb/kasm-apps
+  image: your-nodeapi-image:latest
   port: 3000
-  contextPath: /nodeapi
+
+reactui:
+  image: your-reactui-image:latest
+  port: 3000
+
+domainName: app.internal.example.com
+certificateArn: arn:aws:acm:us-east-2:582683034382:certificate/9525c53b-6f25-44e2-9863-7c262f92deda

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactui
+  labels:
+    app: reactui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactui
+  template:
+    metadata:
+      labels:
+        app: reactui
+    spec:
+      containers:
+        - name: reactui
+          image: {{ .Values.reactui.image }}
+          ports:
+            - containerPort: {{ .Values.reactui.port }}

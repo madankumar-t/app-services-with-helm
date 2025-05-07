@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeapi
+  labels:
+    app: nodeapi
+spec:
+  selector:
+    app: nodeapi
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.nodeapi.port }}
+  type: ClusterIP
