@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeapi
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodeapi
+  template:
+    metadata:
+      labels:
+        app: nodeapi
+    spec:
+      containers:
+      - name: nodeapi
+        image: {{ .Values.nodeapi.image }}
+        ports:
+        - containerPort: {{ .Values.nodeapi.port }}

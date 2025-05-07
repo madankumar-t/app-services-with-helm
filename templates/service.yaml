@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+  namespace: {{ .Values.namespace }}
+spec:
+  selector:
+    app: javaapi # dummy selector for ALB
+  ports:
+    - name: javaapi
+      port: 80
+      targetPort: {{ .Values.javaapi.port }}
+    - name: reactui
+      port: 81
+      targetPort: {{ .Values.reactui.port }}
+    - name: nodeapi
+      port: 82
+      targetPort: {{ .Values.nodeapi.port }}

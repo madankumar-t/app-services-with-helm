@@ -1,0 +1,4 @@
+apiVersion: v2
+name: app-services
+description: Deploys javaapi, react-ui, nodeapi with path-based routing via ALB
+version: 0.1.0

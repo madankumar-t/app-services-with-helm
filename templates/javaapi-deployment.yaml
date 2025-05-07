@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: javaapi
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: javaapi
+  template:
+    metadata:
+      labels:
+        app: javaapi
+    spec:
+      containers:
+      - name: javaapi
+        image: {{ .Values.javaapi.image }}
+        ports:
+        - containerPort: {{ .Values.javaapi.port }}
